@@ -1,6 +1,173 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="color-scheme" content="dark"/>
+<title>个人主页</title>
+
+<style>
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+  background:radial-gradient(circle at 20% 20%,rgba(0,245,255,0.12),transparent 55%),
+             radial-gradient(circle at 80% 20%,rgba(180,0,255,0.12),transparent 55%),
+             radial-gradient(circle at 50% 80%,rgba(0,255,120,0.12),transparent 55%),
+             #090d17;
+  color:#eaf2ff;
+  overflow-x:hidden;
+}
+
+.nav{
+  display:flex;
+  gap:12px;
+  padding:16px 20px;
+  position:sticky;
+  top:0;
+  background:rgba(10,16,34,0.55);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(120,160,255,.18);
+}
+.nav a{
+  padding:6px 12px;
+  border-radius:999px;
+  border:1px solid rgba(120,160,255,.32);
+  text-decoration:none;
+  font-size:13px;
+  color:#eaf2ff;
+}
+.nav a:hover{
+  border-color:#00f5ff;
+  box-shadow:0 0 8px rgba(0,245,255,.4);
+}
+
+.wrap{
+  width:min(1120px,90%);
+  margin:40px auto;
+}
+
+.hero{
+  background:rgba(10,16,34,.45);
+  border:1px solid rgba(120,160,255,.22);
+  padding:32px;
+  border-radius:20px;
+  box-shadow:0 0 30px rgba(0,0,0,.35);
+}
+.hero h1{
+  margin:0;
+  font-size:40px;
+  font-weight:600;
+  text-shadow:0 0 18px rgba(0,245,255,.25);
+}
+.hero p{
+  margin-top:14px;
+  font-size:16px;
+  color:rgba(234,242,255,.75);
+  line-height:1.6;
+}
+
+.section{
+  margin-top:40px;
+  padding:24px;
+  border-radius:18px;
+  background:rgba(10,16,34,.38);
+  border:1px solid rgba(120,160,255,.16);
+}
+.section h2{
+  margin:0 0 16px;
+  font-size:20px;
+  text-shadow:0 0 12px rgba(0,245,255,.30);
+}
+.card{
+  padding:18px;
+  border-radius:14px;
+  margin-bottom:14px;
+  background:rgba(10,16,34,.50);
+  border:1px solid rgba(120,160,255,.18);
+}
+.card:last-child{ margin-bottom:0; }
+.card h3{ margin:0 0 6px;font-size:16px; }
+.card p{ margin:0;color:rgba(234,242,255,.75);font-size:14px;line-height:1.6; }
+
+.badge{
+  display:inline-block;
+  margin-top:10px;
+  padding:4px 10px;
+  border-radius:999px;
+  border:1px solid rgba(0,245,255,.35);
+  font-size:12px;
+  color:#aefbff;
+}
+
+/* 小屏优化 */
+@media(max-width:700px){
+  .hero h1{ font-size:30px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+  <a href="#about">关于我</a>
+  <a href="#skills">技能</a>
+  <a href="#projects">项目</a>
+  <a href="#contact">联系</a>
+</div>
+
+<div class="wrap">
+  <div class="hero" id="about">
+    <h1>你的名字</h1>
+    <p>这里写一句简介，例如：重庆工商大学 / 电子信息工程 / 人工智能方向。</p>
+  </div>
+
+  <div class="section" id="skills">
+    <h2>技能 Skills</h2>
+
+    <div class="card">
+      <h3>编程语言</h3>
+      <p>Python、JavaScript、C++ 等</p>
+      <span class="badge">熟练</span>
+    </div>
+
+    <div class="card">
+      <h3>算法 / AI</h3>
+      <p>YOLO、CNN、深度学习、数据处理等</p>
+      <span class="badge">AI / CV</span>
+    </div>
+
+  </div>
+
+  <div class="section" id="projects">
+    <h2>项目 Projects</h2>
+
+    <div class="card">
+      <h3>WiseWood 松材线虫监测系统</h3>
+      <p>基于 YOLO 与 WEBRB 的智能监测系统。</p>
+      <span class="badge">计算机视觉</span>
+    </div>
+
+    <div class="card">
+      <h3>云端启蒙计划</h3>
+      <p>AI 赋能乡村儿童智能启蒙与关怀。</p>
+      <span class="badge">公益 AI</span>
+    </div>
+  </div>
+
+  <div class="section" id="contact">
+    <h2>联系我 Contact</h2>
+    <div class="card">
+      <p>Email：example@mail.com</p>
+      <p>GitHub：github.com/touchshows</p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html><!doctype html>
+<html lang="zh-CN">
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="dark" />
@@ -418,7 +585,7 @@
     .badge{
       font-family: var(--mono);
       font-size: 11px;
-      padding: 6px 8px;
+      padding: 6px 8px;j
       border-radius: 999px;
       border:1px solid rgba(120,160,255,.20);
       background: rgba(10,16,34,.35);
